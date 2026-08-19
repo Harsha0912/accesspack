@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>Scan results — Accesspack</title>
+  <link rel=icon href=/favicon.svg type=image/svg+xml>
+  <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel=stylesheet href=/static/styles.css>
+</head>
+<body>
+<header class=nav>
+  <a class=brand href=/>Accesspack</a>
+  <nav class=nav-links><a href=/>New scan</a><a href=/legal>Legal</a></nav>
+</header>
+<main class="wrap" style=padding-top:2.2rem;padding-bottom:4rem>
+  <p class=banner>Informational only. Not a legal determination, not a certified VPAT, and not a substitute for a human WCAG/EAA audit.</p>
+  <p class=tag id=status>Scanning</p>
+  <h1 id=page-title>Results</h1>
+  <p class=muted id=meta></p>
+  <div id=error class=banner style=display:none></div>
+  <div id=results style=display:none>
+    <div class=stats>
+      <div class=stat><span class=muted>Issue score</span><b id=score>—</b></div>
+      <div class=stat><span class=muted>Violations</span><b id=viol>0</b></div>
+      <div class=stat><span class=muted>Incomplete</span><b id=inc>0</b></div>
+      <div class=stat><span class=muted>Passes</span><b id=pas>0</b></div>
+    </div>
+    <p class=muted>Automated issue score, not a WCAG conformance level. EN 301 549 / EAA: this automated scan is evidence, not a conformity assessment.</p>
+    <h2>Top issues</h2>
+    <div id=issues></div>
+    <div id=paid style=display:none>
+      <h2>Paid pack</h2>
+      <p class=muted>Download the dated VPAT 2.5 draft and the EAA statement draft.</p>
+      <div class=row>
+        <a class=btn id=dl-vpat-pdf href=#>VPAT PDF</a>
+        <a class="btn ghost" id=dl-vpat-md href=#>VPAT markdown</a>
+        <a class=btn id=dl-stmt-pdf href=#>Statement PDF</a>
+        <a class="btn ghost" id=dl-stmt-html href=#>Statement HTML</a>
+      </div>
+    </div>
+    <div id=locked class=card>
+      <h3>Unlock the pack — $29</h3>
+      <p class=muted>Node details, WCAG mapping, and PDFs are behind the paywall. Checkout wires when Polar is connected.</p>
+      <div class=row>
+        <a class=btn href=/buy>How to buy</a>
+        <a class="btn ghost" id=preview href=#>Preview with ?key=demo</a>
+      </div>
+    </div>
+  </div>
+  <noscript><p class=banner>JavaScript is required to run the scan from this page. POST /api/scan with {"url": "..."}.</p></noscript>
+</main>
+<footer class=site><p>Accesspack — informational only. Not a certified VPAT. <a href=/legal>Disclaimer</a>.</p></footer>
+<script src=/static/app.js></script>
+</body></html>

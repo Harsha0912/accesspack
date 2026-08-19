@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>Accesspack — VPAT-shaped accessibility reports</title>
+  <meta name=description content="Paste a URL. Get a VPAT-shaped report in a minute. Informational only.">
+  <link rel=icon href=/favicon.svg type=image/svg+xml>
+  <link rel=stylesheet href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel=stylesheet href=/static/styles.css>
+</head>
+<body>
+<header class=nav>
+  <a class=brand href=/>Accesspack</a>
+  <nav class=nav-links>
+    <a href=/legal>Legal</a>
+    <a href=/buy>Pricing</a>
+  </nav>
+</header>
+<main class=wrap>
+  <section class=hero>
+    <p class=tag>Accessibility evidence pack</p>
+    <h1>Paste a URL. Get a VPAT-shaped report in a minute.</h1>
+    <p class=lede>Automated WCAG 2.2 scan of the public HTML. A dated VPAT 2.5 draft, an EAA statement you can edit, and a mapped EN 301 549 note. Built for teams who need evidence, not a slide.</p>
+    <form class=scan method=get action=/scan>
+      <label class=muted for=url style=position:absolute;left:-9999px>Public URL</label>
+      <input id=url name=url type=url required placeholder=https://example.com autocomplete=url>
+      <button type=submit>Scan</button>
+    </form>
+    <p class=muted>Free score on every public page. Full pack is $29 one-time. $49/mo coming.</p>
+    <div class=price>
+      <div class=card><div class=muted>One-time pack</div><strong>$29</strong><div class=muted>VPAT PDF + statement HTML/PDF for one URL</div></div>
+      <div class=card><div class=muted>Subscription</div><strong>$49/mo</strong><div class=muted>Coming. Recurring scans, not available yet.</div></div>
+    </div>
+  </section>
+  <p class=banner>Informational only. Not a legal determination, not a certified VPAT, and not a substitute for a human WCAG/EAA audit.</p>
+  <h2>What the pack includes</h2>
+  <div class=grid>
+    <div class=card><h3>axe-core on fetched HTML</h3><p class=muted>We fetch the public document (12s, 2MB cap) and run axe-core via jsdom. No page JavaScript is executed in Python.</p></div>
+    <div class=card><h3>VPAT 2.5 draft</h3><p class=muted>Dated markdown and PDF: impact counts, each violation with selector and snippet, WCAG 2.2 mapping.</p></div>
+    <div class=card><h3>EAA statement draft</h3><p class=muted>HTML and PDF with placeholders for company name, contact, date, and a findings summary.</p></div>
+    <div class=card><h3>EN 301 549 note</h3><p class=muted>This automated scan is evidence, not a conformity assessment.</p></div>
+  </div>
+  <h2>What it is not</h2>
+  <div class=grid>
+    <div class=card><p>Not a certified audit. Not legal advice. Not coverage of JavaScript-rendered apps — we scan the HTML snapshot we fetched.</p></div>
+    <div class=card><p>Private IPs, localhost, and metadata endpoints are blocked. We do not log in, fill forms, or crawl a site.</p></div>
+  </div>
+</main>
+<footer class=site>
+  <p>Accesspack 0.1.0 — informational only. Not a legal determination, not a certified VPAT, not a substitute for a human WCAG/EAA audit. <a href=/legal>Full disclaimer</a>.</p>
+</footer>
+</body></html>
